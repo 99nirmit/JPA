@@ -1,13 +1,16 @@
 package com.jpa.test.entities;
 
-import jakarta.annotation.Generated;
+
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
+
+
 @Entity
-public class User {
+public class MyUser {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,7 +23,7 @@ public class User {
 	private String city;
 
 	
-	public User(int id, String name, String state, String city) {
+	public MyUser(int id, String name, String state, String city) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -28,9 +31,8 @@ public class User {
 		this.city = city;
 	}
 	
-	public User() {
+	public MyUser() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 	
 	public int getId() {
@@ -70,8 +72,6 @@ public class User {
 	public String toString() {
 		return "User [id=" + id + ", name=" + name + ", state=" + state + ", city=" + city + "]";
 	}
-	
-	
 	
 }
 
